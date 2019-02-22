@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Route, HashRouter as Router } from 'react-router-dom';
+import User from './User';
 
-export default class App extends Component {
-    render(){
-        return (
-            <div>
-                <br />
-                <h1>Test</h1>
-            </div>
-        )
-    }
+class App extends Component{
+
+  render(){
+    
+    return (
+      <div>
+        <User />
+      </div>
+    );
+  }
 }
+
+export default connect(null)(App);
